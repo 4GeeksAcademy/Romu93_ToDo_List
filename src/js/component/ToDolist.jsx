@@ -25,14 +25,14 @@ export const TheToDoList = () => {
        )};
 
     return(
-        <div calssName="d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
             <div >            
                 <input type="input" id="theInput"className="form-control" onChange={handleInput} value={myNote} onKeyDown={pushMyList} placeholder="What Need To Be Done?"/>
             </div>            
             <ul className="list-group">                                
                 {task} 
             </ul>
-            <div className="diseño1 card card-body"> <small class="text-body-secondary"> {myListtask.length} item left </small></div>
+            <div className="diseño1 card card-body"> <small className="text-body-secondary"> {myListtask.length} item left </small></div>
             <div className="diseño2 card"></div>
             <div className="diseño3 card"></div>
             <div className="diseño4 card"></div>
