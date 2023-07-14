@@ -2,43 +2,49 @@
     width: 30%;
     margin-top: 30px;
     overflow: auto;
-    max-height: 500px    
-}
+    max-height: 500px}
+
 #theInput{
-    border-radius: 0%;
-}
+    border-radius: 0%;}
+
 #task{
     border-radius: 0%;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: space-between;      
-}
+    justify-content: space-between;}
+
+#task > button{
+    visibility: hidden;}
+    
+#task:hover > button{
+    visibility: visible;
+    color: red;}
+
 .diseño1{
     border-radius: 0%;
     padding-top: 6px;
     padding-bottom: 6px;
-    color: gainsboro;    
-}
+    color: gainsboro;}
+
 .diseño2{
     border-radius: 0%;
     height: 2px;
     margin-left: 2px;
     margin-right: 2px;
-    border-top: none;
-}
+    border-top: none;}
+
 .diseño3{
     border-radius: 0%;
     height: 2px;
     margin-left: 3px;
     margin-right: 3px;
-    border-top: none;
-}
+    border-top: none;}
+
 .diseño4{
     border-radius: 0%;
     height: 1px;
     margin-left: 4px;
     margin-right: 4px;
-    border-top: none;
-}
+    border-top: none;}
 

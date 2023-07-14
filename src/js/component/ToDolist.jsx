@@ -1,30 +1,29 @@
-import { element } from "prop-types";
 import React, { useState } from "react";
-import { GrClose } from "react-icons/gr";
 
-const myList = []
 export const TheToDoList = () => {
-    let contador = myList.length
 
     const [myNote, setMyNote] = useState("");
+    const [myListtask, setMyListtask] = useState([])
 
-    const handleInput = e => {
+    const handleInput = e=> {
         setMyNote(e.target.value)        
     }
-    function pushMyList( e){
+    function pushMyList(e){
         if (e.key == "Enter"){
-            myList.push(myNote)
+            setMyListtask([...myListtask,myNote])
             setMyNote("")
         }       
-    }; 
-
-    const task  = myList.map(element =>{
+    };
+    const task  = myListtask.map(element =>{
             return (
                 <li key={element.id} id="task" className="list-group-item">{element}
-                <button type="button" id="button" className="btn-close"></button> </li>        
+                <button type="button" id="button" className="btn-close" onClick={() => handleDelet(element)}></button> </li>        
             )
     });
-    
+    function handleDelet (element) {
+        setMyListtask(myListtask.filter(item => item !== element)
+       )};
+
     return(
         <div calssName="d-flex justify-content-center">
             <div >            
@@ -33,19 +32,10 @@ export const TheToDoList = () => {
             <ul className="list-group">                                
                 {task} 
             </ul>
-            <div className="diseño1 card card-body"> <small class="text-body-secondary"> {contador} item left </small></div>
+            <div className="diseño1 card card-body"> <small class="text-body-secondary"> {myListtask.length} item left </small></div>
             <div className="diseño2 card"></div>
             <div className="diseño3 card"></div>
             <div className="diseño4 card"></div>
         </div>                
     )
 }
-
- 
-    //const showtheTrash = () => {
-    //    return("<button type=`button` className=`btn btn-light`>`<GrClose/>`</button>")
-    //}onMouseOver={showtheTrash}
-
-   // function handleDelet (e) {
-     //   setMyNote(muList.filter(e => e.id !== task.id)
-    //)};
