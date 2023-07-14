@@ -16,6 +16,7 @@ export const TheToDoList = () => {
             setMyNote("")
         }       
     };
+    let contador = myList.length
 
     //const showtheTrash = () => {
     //    return("<button type=`button` className=`btn btn-light`>`<GrClose/>`</button>")
@@ -39,9 +40,12 @@ export const TheToDoList = () => {
             </div>
             <ul className="list-group">
                 {task} 
-            </ul> 
+            </ul>
+            <div className="diseño1 card card-body"> <small class="text-body-secondary"> {contador} item left </small></div>
+            <div className="diseño2 card"></div>
+            <div className="diseño3 card"></div>
+            <div className="diseño4 card"></div>
         </div>                
-               
     )
 }
 
