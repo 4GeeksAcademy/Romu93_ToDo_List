@@ -9,7 +9,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 const Home = () => {
 	return (
-		<div className= "container">		
+		<div className= "container ">		
 			<TheToDoList/>				
 		</div>
 	);

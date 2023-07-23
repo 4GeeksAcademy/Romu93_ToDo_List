@@ -25,7 +25,7 @@ export const TheToDoList = () => {
        )};
 
     return(
-        <div className="d-flex justify-content-center">
+        <div>
             <div >            
                 <input type="input" id="theInput"className="form-control" onChange={handleInput} value={myNote} onKeyDown={pushMyList} placeholder="What Need To Be Done?"/>
             </div>            
